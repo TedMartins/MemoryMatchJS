@@ -4,10 +4,6 @@
 
 You can test this app at [https://tedmartins.github.io/challenges/DIO-Memory-Match/index.html](https://tedmartins.github.io/challenges/DIO-Memory-Match/index.html).
 
-```
-https://tedmartins.github.io/challenges/DIO-GeniusJS/index.html
-```
-
 ## About
 
 A small game Memory Match Card Game based on Street Fighter II characters.
