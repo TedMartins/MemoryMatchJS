@@ -1,129 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Match Card Game - Street Fighter | by Ted Martins</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game - Street Fighter</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/script.js" async></script>
-</head>
-
-<body>
-    <article>
-        <div class="container">
-
-            <div class="modal-overlay">
-                <div class="modal">
-                    <div>
-                        <P class="container">
-                            CONGRATULATIONS
-                        </P>
-                        <P class="container">
-                            YOU WIN!
-                        </P>
-                        <P>
-                            ATTEMPTS: <span id="attempts">0</span>
-                        </P>
-                        <P class="container thankyou">
-                            THANK YOU FOR PLAYING!
-                        </P>
-                        <p class="container">
-                            <a class="button container" onclick="playAgain()" href="#"> 
-                                PLAY AGAIN 
-                            </a>
-                        </p>
-                        
-                    </div>
-                </div>
-            </div>
-
+  </head>
+  <body>
+    <div class="container">
+      <div class="start-container">
+        <button id="startButton" class="button">START GAME</button>
+      </div>
+      <section class="game-board"></section>
+      <div class="modal-overlay">
+        <div class="modal">
+          <p>CONGRATULATIONS</p>
+          <p>YOU WIN!</p>
+          <p>ATTEMPTS: <span id="attempts">0</span></p>
+          <p class="thankyou">THANK YOU FOR PLAYING!</p>
+          <button class="button" onclick="game.playAgain()">PLAY AGAIN</button>
         </div>
-    </article>
-    <main class="container">
-        <section class="game-board">
-            <div class="card" data-card="ryu">
-                <img src="./assets/img/ryu.jpg" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="ehonda">
-                <img src="./assets/img/ehonda.png" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="blanka">
-                <img src="./assets/img/blanka.jpg" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="guile">
-                <img src="./assets/img/guile.jpg" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="ken">
-                <img src="./assets/img/ken.jpg" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="chunli">
-                <img src="./assets/img/chunli.jpg" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="zangief">
-                <img src="./assets/img/zangief.jpg" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="dhalsim">
-                <img src="./assets/img/dhalsim.png" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="balrog">
-                <img src="./assets/img/balrog.png" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="chunli">
-                <img src="./assets/img/chunli.jpg" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="ryu">
-                <img src="./assets/img/ryu.jpg" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="ken">
-                <img src="./assets/img/ken.jpg" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="dhalsim">
-                <img src="./assets/img/dhalsim.png" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="balrog">
-                <img src="./assets/img/balrog.png" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="zangief">
-                <img src="./assets/img/zangief.jpg" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="ehonda">
-                <img src="./assets/img/ehonda.png" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="guile">
-                <img src="./assets/img/guile.jpg" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-            <div class="card" data-card="blanka">
-                <img src="./assets/img/blanka.jpg" alt="card face" class="card-face">
-                <img src="./assets/img/cardback.png" alt="card back" class="card-back">
-            </div>
-        </section>
-    </main>
-
-
-
-
-
-</body>
-
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
